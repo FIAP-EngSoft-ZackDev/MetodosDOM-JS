@@ -60,10 +60,10 @@ function produtosCard(lista){
         <div class="card">
             <h3>${item.nome}</h3>
             <p>Preço R$ ${item.preco}</p>
-            ${item.emPromocao}? '<span>Promoção</span>': ''}
+            ${item.emPromocao ? '<span>Promoção</span>': ''}
         </div>
         `).join(""); //transforma o array e, uma unica string
 
         container.innerHTML=hmtlProdutos;
 }
-produtosCard();
+produtosCard(produtos);
